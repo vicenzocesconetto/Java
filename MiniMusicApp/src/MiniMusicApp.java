@@ -10,6 +10,7 @@ public class MiniMusicApp {
     public void play() {
         try {
             Sequencer player = MidiSystem.getSequencer();
+//            System.out.println("\nit did");
             player.open();
 
             Sequence seq = new Sequence(Sequence.PPQ, 4);

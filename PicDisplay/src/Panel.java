@@ -12,14 +12,15 @@ public class Panel extends JPanel{
         frame.getContentPane().add(panel);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
+        frame.setSize(1000, 1000);
         frame.setVisible(true);
 //        frame.repaint();
     }
 
     public void paintComponent(Graphics g) {
 //        File file = new File("testpic.jpg");
-        Image image = new ImageIcon("testpic.jpg").getImage();
+        Image image = new ImageIcon(getClass().getResource("testpic.jpg")).getImage();
+//        Image image = new ImageIcon("testpic.jpg").getImage();
         g.drawImage(image, 3, 4, this);
     }
 }

@@ -1,0 +1,25 @@
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+
+public class Panel extends JPanel{
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("attempt");
+        Panel panel = new Panel();
+
+        frame.getContentPane().add(panel);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 500);
+        frame.setVisible(true);
+//        frame.repaint();
+    }
+
+    public void paintComponent(Graphics g) {
+//        File file = new File("testpic.jpg");
+        Image image = new ImageIcon("testpic.jpg").getImage();
+        g.drawImage(image, 3, 4, this);
+    }
+}

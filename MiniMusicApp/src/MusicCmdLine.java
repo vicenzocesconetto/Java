@@ -38,7 +38,6 @@ public class MusicCmdLine {
 
             player.setSequence(seq);
             player.start();
-//            player.stop();
 
         } catch (Exception ex) {
             ex.printStackTrace();
